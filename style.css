@@ -4,7 +4,10 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-
+h1{
+    color:#fff;
+    padding-left:125px;
+}
 table{
     width: 80%;
     margin: 40px auto;
