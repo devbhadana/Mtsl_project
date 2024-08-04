@@ -14,14 +14,22 @@ function onFormSubmit(e) {
 function validateForm(){
 	var salary = document.getElementById('salary').value;
 	var salaryRegex = /^\d+$/;
+	var contact = document.getElementById('contact').value;
+	var contactRegex =  /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/i;
+	
 
 	if (!salaryRegex.test(salary) || salary <= 0) {
                 alert('Please enter a valid salary');
-		resetForm();
+		
                 return false;
 	}
+	if(!contactRegex.test(contact) ){
+		alert('enter a valid mobile number');
+		return false;
+	}
 	else{
-	return true;}
+	return true;
+	}
 }
 
 //Retrieve the data
