@@ -6,7 +6,7 @@ function onFormSubmit(e) {
 	if(!isValid){
 		return;
 	}
-	
+	var formData = readFormData();
         if (selectedRow == null){
             insertNewRecord(formData);
 		}
