@@ -2,7 +2,11 @@ var selectedRow = null
 
 function onFormSubmit(e) {
 	event.preventDefault();
-	validateForm();
+	const isValid = validateForm();
+	if(!isValid){
+		return;
+	}
+	
         if (selectedRow == null){
             insertNewRecord(formData);
 		}
