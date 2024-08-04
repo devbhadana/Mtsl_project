@@ -17,7 +17,8 @@ function validateForm(){
 	var salaryRegex = /^\d+$/;
 
 	if (!salaryRegex.test(salary) || salary <= 0) {
-                alert('Invalid salary. Please enter a positive number for salary.');
+                alert('Please enter a valid salary');
+		resetForm();
                 return false;
 	}
 	return true;
