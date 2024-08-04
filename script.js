@@ -2,6 +2,7 @@ var selectedRow = null
 
 function onFormSubmit(e) {
 	event.preventDefault();
+	validateForm();
         var formData = readFormData();
         if (selectedRow == null){
             insertNewRecord(formData);
@@ -10,6 +11,16 @@ function onFormSubmit(e) {
             updateRecord(formData);
 		}
         resetForm();    
+}
+function validateForm(){
+	var salary = document.getElementById('salary').value;
+	var salaryRegex = /^\d+$/;
+
+	if (!salaryRegex.test(salary) || salary <= 0) {
+                alert('Invalid salary. Please enter a positive number for salary.');
+                return false;
+	}
+	return true;
 }
 
 //Retrieve the data
