@@ -2,7 +2,7 @@ var selectedRow = null
 
 function onFormSubmit(e) {
 	event.preventDefault();
-	return validateForm();
+	validateForm();
         if (selectedRow == null){
             insertNewRecord(formData);
 		}
@@ -20,7 +20,8 @@ function validateForm(){
 		resetForm();
                 return false;
 	}
-	return true;
+	else{
+	return true;}
 }
 
 //Retrieve the data
