@@ -1,7 +1,7 @@
 var selectedRow = null;
 let arr = [];
 function onFormSubmit(e) {
-  event.preventDefault();
+  e.preventDefault();
   const isValid = validateForm();
   if (!isValid) {
     return;
